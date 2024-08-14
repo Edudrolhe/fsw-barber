@@ -1,12 +1,11 @@
 import { SearchIcon } from "lucide-react"
 import Header from "./_components/ui/header"
 import { Button } from "./_components/ui/button"
-
 import { Input } from "./_components/ui/input"
 import Image from "next/image"
 import { Card, CardContent } from "./_components/ui/card"
 import { db } from "./_lib/prisma"
-import BarbershopItem from "./_components/barbershop-item"
+import BarbershopItem from "./_components/ui/barbershop-item"
 import { quickSearchOptions } from "./constants/search"
 import BookingItem from "./_components/ui/booking-item"
 
@@ -24,7 +23,7 @@ const Home = async () => {
       <Header />
       <div className="p-5">
         {/* TEXTO */}
-        <h2 className="text-xl font-bold">Olá, Felipe!</h2>
+        <h2 className="text-xl font-bold">Olá, Eduardo!</h2>
         <p>Segunda-feira, 05 de agosto.</p>
 
         {/* BUSCA */}

@@ -3,29 +3,29 @@ interface QuickSearchOption {
   title: string
 }
 
-export const quickSearchOptions: QuickSearchOption = [
+export const quickSearchOptions: QuickSearchOption[] = [
   {
-    imageUrl: "Cabelo.svg",
+    imageUrl: "/Cabelo.svg",
     title: "Cabelo",
   },
   {
-    imageUrl: "Barba.svg",
+    imageUrl: "/Barba.svg",
     title: "Barba",
   },
   {
-    imageUrl: "Acabamento.svg",
+    imageUrl: "/Acabamento.svg",
     title: "Acabamento",
   },
   {
-    imageUrl: "Messsage.svg",
+    imageUrl: "/Massagem.svg",
     title: "Massagem",
   },
   {
-    imageUrl: "Sobrancelha.svg",
+    imageUrl: "/Sobrancelha.svg",
     title: "Sobrancelha",
   },
   {
-    imageUrl: "Hidratacao.svg",
-    title: "Hidratacao",
+    imageUrl: "/Hidratacao.svg",
+    title: "Hidratação",
   },
 ]
