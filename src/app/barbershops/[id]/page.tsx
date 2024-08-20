@@ -10,6 +10,8 @@ import { StarIcon } from "lucide-react"
 import { notFound } from "../../../../node_modules/next/navigation"
 import ServiceItem from "@/app/_components/ui/service-item"
 import PhoneItem from "@/app/_components/ui/phone-item"
+import { Sheet, SheetTrigger } from "@/app/_components/ui/sheet"
+import SidebarSheet from "@/app/_components/ui/sidebarbutton"
 
 interface BarbershopPageProps {
   params: {
@@ -54,14 +56,18 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
           </Link>
         </Button>
 
-        <Button
-          size="icon"
-          variant="secondary"
-          className="absolute right-4 top-4"
-          asChild
-        >
-          <MenuIcon />
-        </Button>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              size="icon"
+              variant="outline"
+              className="absolute right-4 top-4"
+            >
+              <MenuIcon />
+            </Button>
+          </SheetTrigger>
+          <SidebarSheet />
+        </Sheet>
       </div>
 
       {/* TITULO */}
