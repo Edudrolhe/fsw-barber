@@ -4,6 +4,7 @@ import React from "react"
 import "./globals.css"
 import Footer from "./_components/ui/footer"
 import { Toaster } from "./_components/ui/sonner"
+import AuthProvider from "./_components/ui/provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,10 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
-        {children}
-
-        <Toaster />
-        <Footer />
+        <AuthProvider>
+          {children}
+          <Toaster />
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   )
