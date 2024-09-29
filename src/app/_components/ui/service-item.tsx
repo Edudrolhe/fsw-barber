@@ -210,21 +210,21 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
                       fronDate={new Date()}
                       styles={{
                         head_cell: {
-                          with: "100%",
-                          textTrasnform: "capitalize",
+                          width: "100%",
+                          textTransform: "capitalize",
                         },
                         call: {
-                          with: "100%",
+                          width: "100%",
                         },
                         button: {
-                          with: "100%",
+                          width: "100%",
                         },
                         nav_button_previous: {
-                          with: "32px",
+                          width: "32px",
                           height: "32px",
                         },
                         nav_button_next: {
-                          with: "32px",
+                          width: "32px",
                           height: "32px",
                         },
                         caption: {
