@@ -207,13 +207,13 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
                       locale={ptBR}
                       selected={selectedDay}
                       onSelect={handleDateSelect}
-                      fronDate={new Date()}
+                      fromDate={new Date()}
                       styles={{
                         head_cell: {
                           width: "100%",
                           textTransform: "capitalize",
                         },
-                        call: {
+                        cell: {
                           width: "100%",
                         },
                         button: {
