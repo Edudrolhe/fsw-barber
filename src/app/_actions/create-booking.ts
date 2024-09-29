@@ -8,7 +8,7 @@ import { getServerSession } from "next-auth"
 interface CreateBookingParams {
   userId: string
   serviceId: string
-  data: Date
+  date: Date
 }
 
 export const createBooking = async (params: CreateBookingParams) => {
@@ -16,10 +16,16 @@ export const createBooking = async (params: CreateBookingParams) => {
   if (!user) {
     throw new Error("Usuário não autenticado")
   }
-  await db.booking.create({
-    data: { ...params, userId: (user.user as any).id },
-  })
 
-  revalidatePath("/barbershops/[id]")
-  revalidatePath("/bookings")
+  try {
+    await db.booking.create({
+      data: { ...params, userId: (user.user as any).id },
+    })
+
+    revalidatePath("/barbershops/[id]")
+    revalidatePath("/bookings")
+  } catch (error) {
+    console.error("Error creating booking:", error)
+    throw new Error("Erro ao criar a reserva")
+  }
 }
